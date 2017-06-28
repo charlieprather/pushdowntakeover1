@@ -1,0 +1,119 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 450px;
+  width: 900px;
+}
+div {
+  margin: 0;
+  padding: 0;
+}
+.stage {
+  position: absolute;
+  width: 900px;
+  height: 450px;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  opacity: 0;
+}
+.collapseButton {
+  position: absolute;
+  width: 38px;
+  height: 38px;
+  top: 5px;
+  right: 5px;
+  z-index: 90;
+  cursor: pointer;
+}
+.stageBackground {
+  width: 900px;
+  height: 175px;
+  background: #ebebeb;
+}
+.stage .logo {
+  position: absolute;
+  margin: 0;
+  right: 20px;
+  bottom: 20px;
+  width: 100px;
+}
+.stage .templateName {
+  position: absolute;
+  width: auto;
+  top: 14px;
+  left: 20px;
+  font-family: Arial;
+  font-weight: normal;
+  font-size: 12px;
+  color: #556770;
+  text-align: left;
+}
+.videoArea {
+  position: absolute;
+  top: 70px;
+  left: 20px;
+}
+.clickArea {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+.callToAction {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(192, 192, 192);
+  background-color: rgba(192, 192, 192, 0);
+}
+
+
+
+
+
+
+#test p {
+    text-align: center;
+    animation: fadein 2s;
+    -moz-animation: fadein 2s; /* Firefox */
+    -webkit-animation: fadein 2s; /* Safari and Chrome */
+    -o-animation: fadein 2s; /* Opera */
+}
+@keyframes fadein {
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-moz-keyframes fadein { /* Firefox */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-webkit-keyframes fadein { /* Safari and Chrome */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity:1;
+    }
+}
+@-o-keyframes fadein { /* Opera */
+    from {
+        opacity:0;
+    }
+    to {
+        opacity: 1;
+    }
+}

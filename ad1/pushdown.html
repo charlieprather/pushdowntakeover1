@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!-- Weborama SCREENAD META DATA (don't edit/remove) -->
+		<!-- SCRVERSION: screenad_interface_1.0.3 -->
+		<!-- SCRFORMAT: layer -->
+		<!-- SCRSTICKY: false -->
+		<!-- SCRWIDTH: 900 -->
+		<!-- SCRHEIGHT: 450 -->
+		<!-- TEMPLATENAME: Yoki RON Pushdown Takeover Header -->
+		<script src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+		<script src="//media.adrcdn.com/scripts/jquery.min.js"></script>
+		<script src="pushdown.js"></script>
+		<link href="styles.css" rel="stylesheet"/>
+		<script>
+
+
+
+
+
+			/* Settings Video */
+			var videoWidth = 485;
+			var videoHeight = 360;
+
+			// Called when all the elements have sent the preload event. At this point all elements are ready to play.
+			function syncHandler() {
+				// All elements have been loaded and are ready for the animation to start.
+				// Your JS
+			    // Optional/Samples:
+			    createVideo();
+			    $('#stage').animate({
+			        opacity: 1
+			    });
+			}
+
+			function onCollapse() {
+			    // Your JS
+			    // Optional/Samples:
+			    $('#stageBackground').css('height', 173); //Note: 173 instead of 175 because of the borders
+			    $('.logo').animate({
+			        bottom: 290
+			    });
+			    $('#stage').fadeIn();
+			    $('#videoArea').fadeOut();
+			}
+
+			function onExpand() {
+			    // Your JS
+			    // Optional/Samples:
+			    $('#stageBackground').css('height', 448).css('width', 448); //Note: 448 instead of 450 because of the borders
+			    $('.logo').animate({
+			        bottom: 20
+			    });
+			    $('#videoArea').fadeIn();
+			}
+
+
+
+
+var myVideo = document.getElementById("video1"); 
+
+function playPause() { 
+    if (myVideo.paused) 
+        myVideo.play(); 
+    else 
+        myVideo.pause(); 
+} 
+
+		</script>
+
+		<style type="text/css">
+			
+ 
+	@keyframes fadeIn { 
+	 from { opacity: 0; } 
+	}
+
+	.sunshine {
+
+	 position: absolute;
+	 z-index: 10000;
+	   opacity: 1
+	 ;
+	 animation: fadeIn 1s infinite alternate;
+	}
+
+
+
+
+	@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+	.fade-in {
+	   opacity:0;
+	   -webkit-animation:fadeIn ease-in 1;
+	   -moz-animation:fadeIn ease-in 1;
+	   animation:fadeIn ease-in 1;
+
+	   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	   -moz-animation-fill-mode:forwards;
+	   animation-fill-mode:forwards;
+
+	   
+	}
+
+
+
+
+		</style>
+	</head>
+	<body>
+		<img class="collapseButton" id="collapseButton" src="//media.adrcdn.com/ad-resources/weborama_close_88x88.png"/>
+		<div class="stage" id="stage">
+			<div class="clickArea" id="clickArea" onclick="screenad.click();"><img  class="grow"  src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1497947481/Center_update1_900x450_uuc7jj.png" >
+</div>
+			<div class="videoArea" id="videoArea" id="myVideo" style="z-index: 100000;display: block; padding-left: 40px;"></div>
+
+ <input type="button" value="play/pause" onclick="videoControl()"></input>
+
+
+
+<img class="logo" style="width: 150px; bottom: 20px;" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1498230075/bt_ec6rlz.png">
+			<div class="templateName">
+				<strong></strong><br>
+			</div>
+			<div class="stageBackground" id="stageBackground"></div>
+		</div>
+	</body>
+</html>

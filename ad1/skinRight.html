@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type"><!-- WEBORAMA SCREENAD META DATA (don't edit/remove) -->
+	<!-- SCRVERSION: screenad_interface_1.0.3 -->
+	<!-- SCRFORMAT: layer -->
+	<!-- SCRSTICKY: false -->
+	<!-- SCRWIDTH: 500 -->
+	<!-- SCRHEIGHT: 1199 -->
+	<!-- TEMPLATENAME: Yoki RON Pushdown Takeover SkinRight -->
+
+	<script src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js">
+	</script>
+	<script src="//media.adrcdn.com/scripts/jquery.min.js">
+	</script>
+	<script>
+	           // Called when all the elements have sent the preload event. At this point all elements are ready to play.
+	           function syncHandler() {
+	               // All elements have been loaded and are ready for the animation to start.
+	           }
+	           
+	           // WEBORAMA CODE - handle with care
+
+	           screenad.onPreloadComplete = readyHandler;
+
+	           function readyHandler() {
+	               screenad.hide();
+	           }
+
+	           var sticky = false;
+	           sticky = ((screenad.vars.scrsticky === '') || (screenad.vars.scrsticky === undefined)) ? sticky : screenad.vars.scrsticky;
+
+	           screenad.shared.setPosition = function(siteObject) {
+	               screenad.setSize(500, 1199);
+	               screenad.setAlignment('center', siteObject.valign);
+	               screenad.setOffset(((((siteObject.width >= 900) ? siteObject.width : 900) / 2) + 250), siteObject.offsety);
+	               screenad.setSticky(sticky);
+	               if (siteObject.skins_zindex != undefined && siteObject.skins_zindex.length > 0) {
+	                   screenad.setZIndex(siteObject.skins_zindex);
+	               }
+	               screenad.position();
+	               screenad.show();
+	               syncHandler();
+	           };
+
+
+
+
+	$(document).ready(onReady);
+
+	   function onReady(){
+	       // Screenad Align & Position
+	       screenad.setAlignment("center", "center");
+	       screenad.setSize(500, 400);
+	       screenad.position();
+	       // Replay Ad Hanlder
+	       screenad.shared.replayLayer = function(){
+	           screenad.show();
+	           replayAnimation();
+
+	       }; screenad.shared.replayLayer2 = function(){
+	           screenad.show();
+	                       replayAnimation2();
+
+	       };
+	       // Close Ad Handler
+	       $("#closeButton").on("click", function(){ screenad.hide(); });
+	       replayAnimation();
+	   }
+
+	   function replayAnimation(){
+	       // Add your animation / code here!
+	       // Just a sample animation:
+	       $( "#logo" ).animate({ top: "-400px" }, 700, function(){ $("#logo").animate({top:"-80px"},500); });
+	   
+	       $( "#closeButton" ).animate({ top: "-10px" }, 700, function(){ $("#closeButton").animate({top:"8px"},900); });
+	   }
+
+
+
+
+	</script>
+	<style type="text/css">
+	           body {
+	               margin: 0;
+	               padding: 0;
+	           }
+	           .stage {
+	               position: absolute;
+	               width: 500px;
+	               height: 1199px;
+	           }
+	           .clickLayer {
+	               position: absolute;
+	               width: 280px;
+	               height: 280px;
+	               top: 0;
+	               left: 0;
+	               cursor: pointer;
+	           }
+	           .info {
+	               position: absolute;
+	               font-family: Arial,Serif;
+	               font-size: 12px;
+	               left: 30px;
+	               top: 15px;
+	               text-align: left;
+	               color: #556770;
+	           }
+	           .backgroundImg {
+	               position: absolute;
+	               top: 0;
+	               left: 0;
+	           }
+
+
+
+
+
+	@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+	.fade-in {
+	   opacity:0;
+	   -webkit-animation:fadeIn ease-in 1;
+	   -moz-animation:fadeIn ease-in 1;
+	   animation:fadeIn ease-in 1;
+
+	   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	   -moz-animation-fill-mode:forwards;
+	   animation-fill-mode:forwards;
+
+	   -webkit-animation-duration:2s;
+	   -moz-animation-duration:2s;
+	   animation-duration:2s;
+	}
+
+	.fade-in.one {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay:1s;
+	animation-delay: 1s;
+	}
+
+	.fade-in.two {
+	-webkit-animation-delay: 1s;
+	-moz-animation-delay:1s;
+	animation-delay: 1s;
+	}
+
+
+
+
+	.levitate{
+	 -webkit-animation: 
+	       fadeInDown 2s 1,
+	       levitate 2s infinite;  
+	   -moz-animation: 
+	       fadeInDown 2s 1,
+	       levitate 2s infinite;
+	}
+
+
+	@-webkit-keyframes fadeInDown {
+	   0% {
+	        -webkit-transform: translateY(-500px);
+	       opacity:0;        
+	  }
+
+	   100% {
+	       -webkit-transform: translateY(100px);
+	       opacity:1;
+	  }
+	}
+	@-moz-keyframes fadeInDown {
+	   0% {
+	        -moz-transform: translateY(-500px);
+	       opacity:0;        
+	  }
+
+	   100% {
+	       -moz-transform: translateY(100px);
+	       opacity:1;
+	  }
+	}
+
+	@-webkit-keyframes levitate{
+	 0% {
+	        -webkit-transform: translateY(-5px);
+
+	  }
+	  
+	  
+
+	   50% {
+	          -webkit-transform: translateY(0px);
+	  }
+
+	100%{
+	        -webkit-transform: translateY(-5px);
+	}
+
+	}
+
+	@-moz-keyframes levitate{
+	 0% {
+	        -moz-transform: translateY(-5px);
+	  }
+
+	   50% {
+	          -moz-transform: translateY(3px);
+
+	  }
+
+	100%{
+	        -moz-transform: translateY(-5px);
+	}
+
+	}
+
+	img {
+	   margin-bottom: 65px;
+	}
+
+	span{
+	   display:block;
+	   width:400px;
+	   height:0;
+	   background: rgba(0,0,0,0.5);
+	   box-shadow: 0px 0px 5px 2px rgba(0,0,0,0.5);
+	   margin: 0 auto;
+	   position: absolute;
+	   
+	   border-radius: 50%;
+	}
+
+
+	.elem {
+	   z-index: 100;
+	   position: absolute;
+	   top: 43px;
+	   left: -33px;
+	   background-image: url(skinRight.html);
+	   transition-property: transform;
+	   transition-duration: 1s;
+	}
+
+
+	@keyframes rotate {
+	   from {transform: rotate(0deg);}
+	   to {transform: rotate(360deg);}
+	}
+
+
+	@import "compass/css3";
+
+	@keyframes fadeIn { 
+	 from { opacity: 0; } 
+	}
+
+	.sunshine {
+
+	 position: absolute;
+	 z-index: 10000;
+	   opacity: 0.3;
+
+	 
+	 animation: fadeIn 4s infinite alternate;
+	}
+
+
+
+
+	@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+	.fade-in {
+	   opacity:0;
+	   -webkit-animation:fadeIn ease-in 1;
+	   -moz-animation:fadeIn ease-in 1;
+	   animation:fadeIn ease-in 1;
+
+	   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	   -moz-animation-fill-mode:forwards;
+	   animation-fill-mode:forwards;
+
+	   
+	}
+
+
+
+
+	</style>
+
+	<title>
+	</title>
+</head>
+
+<body>
+
+
+
+
+
+		<div class="sunshine"><img class="" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1497955951/solarflare5_pioqdr.png" style="opacity: .65; width: 530px;position: absolute;padding-top: 10px;padding-left: 140px;z-index: 10000000;">
+	</div>
+
+
+	<div class="stage grow" id="stage">
+		<!-- Your HTML inside "stage" please -->
+		<img class="backgroundImg" id="backgroundImg" src="http://res.cloudinary.com/dqle7rqpy/image/upload/v1497964449/SideRight_500x1199_2_oyhmyi.png" style=" z-index: -1;">
+
+		<div class="info" id="info">
+		</div>
+
+
+
+
+
+
+
+		<div class="clickLayer" id="clickLayer" onclick="screenad.click();">
+		</div>
+
+		
+	</div>
+</body>
+</html>

@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+		<!-- WEBORAMA SCREENAD META DATA (don't edit/remove) -->
+		<!-- SCRVERSION: screenad_interface_1.0.3 -->
+		<!-- SCRFORMAT: layer -->
+		<!-- SCRSTICKY: false -->
+		<!-- SCRWIDTH: 500 -->
+		<!-- SCRHEIGHT: 1199 -->
+		<!-- TEMPLATENAME: Yoki RON Pushdown Takeover SkinRight -->
+		<script src="//media.adrcdn.com/scripts/screenad_interface_1.0.3_scrambled.js"></script>
+		<script src="//media.adrcdn.com/scripts/jquery.min.js"></script>
+		<script>
+			// Called when all the elements have sent the preload event. At this point all elements are ready to play.
+			function syncHandler() {
+				// All elements have been loaded and are ready for the animation to start.
+			}
+			
+			// WEBORAMA CODE - handle with care
+
+			screenad.onPreloadComplete = readyHandler;
+
+			function readyHandler() {
+				screenad.hide();
+			}
+
+			var sticky = false;
+			sticky = ((screenad.vars.scrsticky === '') || (screenad.vars.scrsticky === undefined)) ? sticky : screenad.vars.scrsticky;
+
+			screenad.shared.setPosition = function(siteObject) {
+				screenad.setSize(500, 1199);
+				screenad.setAlignment('center', siteObject.valign);
+				screenad.setOffset(((((siteObject.width >= 970) ? siteObject.width : 970) / 2) + 250), siteObject.offsety);
+				screenad.setSticky(sticky);
+				if (siteObject.skins_zindex != undefined && siteObject.skins_zindex.length > 0) {
+					screenad.setZIndex(siteObject.skins_zindex);
+				}
+				screenad.position();
+				screenad.show();
+				syncHandler();
+			};
+		</script>
+		<style type="text/css">
+			body {
+				margin: 0;
+				padding: 0;
+			}
+			.stage {
+				position: absolute;
+				width: 500px;
+				height: 1199px;
+			}
+			.clickLayer {
+    position: absolute;
+    width: 280px;
+    height: 900px;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    cursor: pointer;
+}
+			.info {
+				position: absolute;
+				font-family: Arial,Serif;
+				font-size: 12px;
+				left: 30px;
+				top: 15px;
+				text-align: left;
+				color: #556770;
+			}
+			.backgroundImg {
+				position: absolute;
+				top: 0;
+				left: 0;
+			}
+
+
+
+
+	@import "compass/css3";
+
+	@keyframes fadeIn { 
+	 from { opacity: 0; } 
+	}
+
+	.sunshine {
+
+	 position: absolute;
+	 z-index: 10000;
+	   opacity: 0.3;
+
+	 
+	 animation: fadeIn 4s infinite alternate;
+	}
+
+
+
+
+	@-webkit-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@-moz-keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+	@keyframes fadeIn { from { opacity:0; opacity: 1\9; /* IE9 only */ } to { opacity:1; } }
+
+	.fade-in {
+	   opacity:0;
+	   -webkit-animation:fadeIn ease-in 1;
+	   -moz-animation:fadeIn ease-in 1;
+	   animation:fadeIn ease-in 1;
+
+	   -webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	   -moz-animation-fill-mode:forwards;
+	   animation-fill-mode:forwards;
+
+	   
+	}
+
+			
+		</style>
+	</head>
+	<body>
+		<div class="clickLayer" id="clickLayer" onclick="screenad.click();"></div>
+
+	<div class="sunshine"><img class="" src="sunray.png" style="opacity: .65; width: 530px;position: absolute;padding-top: 10px;padding-left: 140px;z-index: 10000000;">
+	</div>
+
+
+		<div class="stage" id="stage">	
+
+			<!-- Your HTML inside "stage" please -->
+			<img class="backgroundImg" id="backgroundImg" src="bg_right.png"/>
+			<div class="info" id="info">
+		
+		</div>
+	</body>
+</html>
